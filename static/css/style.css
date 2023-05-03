@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #2d2d2d;
+    --accent: #c444ff;
+    --less-white: #e6e6e6;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    background-color: var(--primary-color);
+    margin: 5%;
+    padding: 0;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 600;
+    margin: 0;
+    color: var(--accent);
+}
+
+h2 {
+    font-weight: 600;
+    margin: 0;
+    color: var(--accent);
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    border-radius: 4rem;
+
+    border: var(--secondary-color) solid .25rem;
+    will-change: border;
+    transition: border .2s ease-in-out;
+}
+
+form:focus-within {
+    border: var(--accent) solid .25rem;
+}
+
+form > input[type=text] {
+    height: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 0 1rem;
+    border-radius: 4rem;
+    outline: none;
+}
+
+form > input[type=text]:autofill {
+   color:white;
+}
+
+form > input[type=submit] {
+    aspect-ratio: 1/1;
+    height: 100%;
+
+    outline: none;
+    background: none;
+    border-radius: 50%;
+    color: white;
+    border: var(--secondary-color) solid .25rem;
+    will-change: border, color;
+    transition: border .2s ease-in-out, color .2s ease-in-out;
+}
+
+form > input[type=submit]:hover {
+    border: var(--accent) solid .25rem;
+    color: var(--accent);
+}
+
+body > p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--less-white);
+}
+
+.result {
+    border-width: .25rem;
+    border-style: solid;
+}
+
+.result > h3 {
+    margin-bottom: 2%;
+}
+
+.result > p {
+    font-weight: 200;
+    margin: 0;
+}
+
+.result > p > .error-code {
+    color: var(--secondary-color)
+}
+
+@media screen and (orientation: portrait) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    form {
+        height: 8rem;
+        margin-bottom: 5%;
+    }
+
+    form > input[type=text] {
+        font-size: 3rem;
+        width: 83%;
+    }
+
+    form > input[type=submit] {
+        font-size: 6rem;
+    }
+
+    .result {
+        padding: 5%;
+        border-radius: 4rem;
+        width: 68%;
+    }
+
+    .result > h3 {
+        margin-bottom: 2%;
+    }
+
+    .result > p {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    form {
+        height: 4rem;
+        margin-bottom: 1%;
+        width: 60%;
+    }
+
+    form > input[type=text] {
+        font-size: 2rem;
+        width: 93%;
+    }
+
+    form > input[type=submit] {
+        font-size: 3rem;
+    }
+
+    .result {
+        padding: 2%;
+        border-radius: 2rem;
+        width: 56%;
+    }
+}
