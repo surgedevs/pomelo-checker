@@ -1,6 +1,6 @@
 # pomelo-checker
 
-## Site for checking availability of Pomelo names.
+Site for checking availability of Pomelo names.
 
 # ATTENTION
 # THIS SITE SHUT DOWN AT DISCORDS REQUEST
@@ -8,15 +8,17 @@
 
 ## Requirements
 
-At least PHP 8.2
-Default PHP Extensions
-MySQL Database
+- At least PHP 8.2
+- Default PHP Extensions
+- MySQL Database
+- Apache2 Webserver
+- Apache RewriteEngine
 
 ## Deployment
 
-.htaccess
+Add .htaccess to root (if required)
 
-i.e.
+Example .htaccess
 ```
 RewriteEngine On
 
@@ -39,4 +41,4 @@ dbname: Database name
 username: Database username
 password: Database password
 
-Set up Apache vHost/ nginx Server Block pointing to the directory of the site.
+Set up Apache vHost pointing to the directory of the site.
