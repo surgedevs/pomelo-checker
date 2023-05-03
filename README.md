@@ -33,12 +33,11 @@ Add Database dump to your database (pomelo.sql)
 
 Fill in config.json
 
-token: Discord account token (must be a valid, non-bot token)
-
-database:
-host: Database host IP
-dbname: Database name
-username: Database username
-password: Database password
+- token: Discord account token (must be a valid, non-bot token)
+- database:
+- host: Database host IP
+- dbname: Database name
+- username: Database username
+- password: Database password
 
 Set up Apache vHost pointing to the directory of the site.
